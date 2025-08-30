@@ -99,7 +99,6 @@ def get_ingests(docs: List[Document],
 
 
 if __name__ == "__main__":
-    
     if os.path.exists(DATA_PATH):
         data = pd.read_parquet(DATA_PATH)
         print("FAISS VectorStore loaded successfully !")
