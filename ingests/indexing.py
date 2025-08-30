@@ -7,7 +7,7 @@ from langchain.vectorstores import FAISS, VectorStore
 from tqdm import tqdm
 
 from constants import DATA_PATH, FAISS_INDEX_PATH
-from ingests.embbedings import get_embeddings_model 
+from ingests.embeddings import get_embeddings_model
 
  
 def transform_to_docs(data: pd.DataFrame) -> List[Document]:
@@ -99,12 +99,11 @@ def get_ingests(docs: List[Document],
 
 
 if __name__ == "__main__":
+    
     if os.path.exists(DATA_PATH):
         data = pd.read_parquet(DATA_PATH)
-        print("File loaded successfully!")
-        
+        print("FAISS VectorStore loaded successfully !")
         docs = transform_to_docs(data)
         faiss_index = get_ingests(docs=docs)
-
     else:
         print(f"Unknown file: {DATA_PATH}")
