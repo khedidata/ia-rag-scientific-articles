@@ -1,3 +1,1 @@
-from .factory import *
-
-__all__ = ["CS_CATEGORIES"]  
+from .factory import CS_CATEGORIES 
