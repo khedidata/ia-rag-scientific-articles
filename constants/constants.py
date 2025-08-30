@@ -8,10 +8,12 @@ ARXIV_CATEGORIES: List[str] = [
     "cs.PF", "cs.PL", "cs.RO", "cs.SC", "cs.SD", "cs.SE", "cs.SI", "cs.SY"
 ]
 
-ARXIV_API_BASE_URL: str = "http://export.arxiv.org/api/query?" 
+ARXIV_API_BASE_URL = "http://export.arxiv.org/api/query?" 
 
-DATA_PATH: str = "./data/articles.parquet"
+DATA_PATH = "./data/articles.parquet"
 
-EMBEDDINGS_MODEL_NAME: str = "allenai-specter"
+EMBEDDINGS_MODEL_NAME = "allenai-specter"
 
-FAISS_INDEX_PATH: str = "./faiss_index"
+LLM_MODEL_NAME = "gpt-4o-mini"
+
+FAISS_INDEX_PATH = "./faiss_index"
