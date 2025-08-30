@@ -8,11 +8,15 @@ import feedparser
 from constants import ARXIV_API_BASE_URL, ARXIV_CATEGORIES 
 
 
-# ---------------- Constants ----------------
+# =============== Constants ===============
 MAX_RESULTS_PER_REQUEST = 300
 REQUEST_DELAY_SECONDS = 3
 
-# ---------------- Functions ----------------
+
+# ======================================
+#          Scrapping Functions
+# ======================================
+
 def fetch_arxiv_feed(category: str, start: int = 0, max_results: int = MAX_RESULTS_PER_REQUEST) -> feedparser.FeedParserDict:
     """
     Fetch a batch of arXiv entries for a given category.
@@ -62,4 +66,3 @@ def fetch_all_cs_entries(categories: List[str]) -> List[feedparser.FeedParserDic
 
 def main_articles_collection():
     return fetch_all_cs_entries(ARXIV_CATEGORIES)
-

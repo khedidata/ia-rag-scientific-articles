@@ -8,8 +8,9 @@ from constants import DATA_PATH
 from utils import regex_for_title
 
 
-# ---------------- Main Data Preprocessor ----------------
-def data_preprocessor(export: bool = False) -> pd.DataFrame:
+# =============== Main Data Preprocessor ===============
+
+def data_preprocessor(export: bool = True) -> pd.DataFrame:
     """
     Fetch and preprocess articles from the main collection.
 
@@ -67,4 +68,3 @@ def data_preprocessor(export: bool = False) -> pd.DataFrame:
 
 if __name__ == "__main__":
     data = data_preprocessor()
-
