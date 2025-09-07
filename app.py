@@ -20,7 +20,6 @@ app.add_middleware(
 class ChatInput(BaseModel):
     message: str
 
-
 @app.get("/", response_class=HTMLResponse)
 def index():
     html = pathlib.Path("index.html").read_text(encoding="utf-8")
