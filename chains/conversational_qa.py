@@ -9,10 +9,12 @@ from constants import LLM_MODEL_NAME
 from models import vector_store
 from prompt import ANSWER_PROMPT, REPHRASE_PROMPT
 from utils import format_context, reciprocal_rank_fusion
+from config import OPENAI_API_KEY
+
 
 
 # ========== LLM (LARGE LANGUAGE MODEL) ========== # 
-llm = ChatOpenAI(model=LLM_MODEL_NAME, temperature=0)
+llm = ChatOpenAI(model=LLM_MODEL_NAME, temperature=0, api_key=OPENAI_API_KEY)
 
 
 # ========== Conversation Memory ========== #
@@ -57,7 +59,7 @@ def generate_alternative_queries(query: str,
     seen, unique = set(), []
     for q in queries:
         if q.lower() not in seen:
-            seen.add(q.lower)
+            seen.add(q.lower())
             unique.append(q)
             continue
     return unique[: n + 1]
