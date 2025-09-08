@@ -1,6 +1,6 @@
 # AI Assistant (RAG) – arXiv Scientific Documentation
 
-Un assistant **RAG (Retrieval-Augmented Generation)** conçu pour interroger automatiquement les abstracts (arXiv)[https://arxiv.org/] en Computer Science.  
+Un assistant **RAG (Retrieval-Augmented Generation)** conçu pour interroger automatiquement les abstracts (https://arxiv.org/)[arXiv] en Computer Science.  
 
 L’utilisateur peut poser des questions en langage naturel, et le système génère des réponses :  
 
