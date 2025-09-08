@@ -62,6 +62,7 @@ This project follows a structured pipeline of Retrieval-Augmented Generation (RA
 
 ## Project Structure
 
+```bash
 ├── .dockerignore               # Files and folders excluded from Docker build context  
 ├── .env                        # Environment variables (API keys, LangSmith config, etc.)  
 ├── .gitignore                  # Git ignored files and folders  
@@ -116,6 +117,7 @@ This project follows a structured pipeline of Retrieval-Augmented Generation (RA
 └── utils/                      # General utility functions  
     ├── functions.py            # Misc helper functions  
     └── __init__.py  
+```
 
 
 ## 📦 Installation locale
