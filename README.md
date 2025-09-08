@@ -56,8 +56,67 @@ This project follows a structured pipeline of Retrieval-Augmented Generation (RA
 
 - **Backend**: FastAPI serves the API (`/chat`, `/docs`) and the HTML interface.  
 - **Frontend**: a simple `index.html` with a chat-style interface to ask questions and display answers.  
-- **Integration**: user queries are sent to the RAG pipeline, and answers are shown directly in the browser.  
+- **Integration**: user queries are sent to the RAG pipeline, and answers are shown directly in the browser.
+
 ---
+
+## Project Structure
+
+├── .dockerignore               # Files and folders excluded from Docker build context  
+├── .env                        # Environment variables (API keys, LangSmith config, etc.)  
+├── .gitignore                  # Git ignored files and folders  
+├── .python-version             # Python version specification (e.g., pyenv/Poetry)  
+├── Dockerfile                  # Docker image definition  
+├── docker-compose.yml          # Orchestration of the app in Docker  
+├── requirements.txt            # Python dependencies  
+├── README.md                   # Project documentation 
+│
+├── app/                        # FastAPI application  
+│   └── app.py                  # API endpoints (serves UI and /chat)  
+│
+├── chains/                     # LangChain pipelines  
+│   ├── conversational_qa.py    # Main RAG chain (retrieval + answer generation)  
+│   ├── prompts.py              # Prompt templates for rephrasing and answering  
+│   ├── utils.py                # Helper functions for RAG pipelines  
+│   └── __init__.py  
+│
+├── config.py                   # Global configuration (API keys, settings)  
+│
+├── constants/                  # Global constants  
+│   ├── constants.py            # Constant values used across the project  
+│   └── __init__.py  
+│
+├── data/                       # Local dataset storage  
+│   └── articles.parquet        # Collected and preprocessed arXiv abstracts  
+│
+├── data_collection/            # Data acquisition pipeline  
+│   ├── collector.py            # Fetch articles from arXiv API  
+│   ├── preprocess.py           # Clean and normalize raw data  
+│   └── __init__.py  
+│
+├── factory/                    # Factory methods / dependency injection  
+│   ├── factory.py              # Build LangChain components (LLM, retriever, etc.)  
+│   └── __init__.py  
+│
+├── faiss_index/                # Prebuilt FAISS vector index  
+│   ├── index.faiss             # FAISS binary index  
+│   └── index.pkl               # Metadata for the index  
+│
+├── index.html                  # Minimal web chat interface (frontend)  
+│
+├── ingests/                    # Embeddings & indexing pipeline  
+│   ├── embeddings.py           # Embedding model setup (sentence-transformers, etc.)  
+│   ├── indexing.py             # Index creation and persistence (FAISS + metadata)  
+│   └── __init__.py  
+│
+├── models/                     # Vector store retriever logic  
+│   ├── vstore_retriever.py     # Custom retriever using FAISS  
+│   └── __init__.py  
+│
+└── utils/                      # General utility functions  
+    ├── functions.py            # Misc helper functions  
+    └── __init__.py  
+
 
 ## 📦 Installation locale
 
