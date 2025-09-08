@@ -26,6 +26,13 @@ This project follows a structured pipeline of Retrieval-Augmented Generation (RA
 - **Source** : Automated scraping of articles via the official [arXiv API](https://info.arxiv.org/help/api/).
 - **Preprocessing** : Retention of information deemed essential &rarr; Abstract + Metadatas.
 - **Post Preprocessing Storage** : Data is stored locally in the `data\`.
+
+### 2. Embeddings & Indexing
+
+- **Model** : The embedding model used is [allenai-specter](https://huggingface.co/allenai/specter), which is very good for arXiv documentation.
+- **Vector Store** : Using a FAISS indexing method to vectorized articles.
+- **Post Treatment** : Indexed articles saved in `faiss_index\`.
+
 ---
 
 ## 📦 Installation locale
