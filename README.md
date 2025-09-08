@@ -1,19 +1,19 @@
 # AI Assistant (RAG) – arXiv Scientific Documentation
 
-Un assistant **RAG (Retrieval-Augmented Generation)** conçu pour interroger automatiquement les abstracts [arXiv](https://arxiv.org/) en Computer Science.  
+A **RAG (Retrieval-Augmented Generation)** assistant designed to automatically query abstracts [arXiv](https://arxiv.org/) in Computer Science.
 
-L’utilisateur peut poser des questions en langage naturel, et le système génère des réponses :  
+The user can ask questions in natural language, and the system generates answers:  
 
-- **Structurées** : résumé concis suivi de détails en puces.
-- **Sourcées** : chaque élément provient du contexte documentaire récupéré. 
-- **Accessibles** : via une interface web minimaliste et intuitive.  
+- **Structurées** : concise summary followed by bullet points of details.
+- **Sourcées** : each element comes from the retrieved documentary context. 
+- **Accessibles** : via a minimalist and intuitive web interface.  
 
-Le projet est développé en **Python 3.11** et repose sur plusieurs composants modernes :  
+The project is developed in **Python (3.11)** and relies on several modern components :  
 
-- **LangChain** → orchestration des prompts, mémoire conversationnelle et logique RAG.
-- **FAISS** → moteur de recherche vectorielle pour indexer et retrouver les abstracts.  
-- **OpenAI** → modèles de langage pour la génération augmentée. 
-- **FastAPI** → API backend performante servant les réponses et l’interface web.  
+- **LangChain** → orchestration of prompts, conversational memory and RAG logic.
+- **FAISS** → vector search engine to index and find the abstracts.  
+- **OpenAI** → language models for augmented generation. 
+- **FastAPI** → powerful backend API serving the answers and web interface.  
 
 ---
 
