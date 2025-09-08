@@ -25,7 +25,6 @@ This project follows a structured pipeline of Retrieval-Augmented Generation (RA
 
 - **Source** : Automated scraping of articles via the official [arXiv API](https://info.arxiv.org/help/api/).
 - **Preprocessing** : Retention of information deemed essential &rarr; Abstract + Metadatas (title, author, publication, PDF URL).
-    - **Abstract
 
 ---
 
