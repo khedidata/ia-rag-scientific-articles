@@ -51,7 +51,12 @@ This project follows a structured pipeline of Retrieval-Augmented Generation (RA
   - Embedded references (title + arXiv link).  
 - **Conversation Memory**  
   The history of questions and answers is stored to maintain context across multiple turns.
-  
+
+### 4. Web Application (FastAPI)
+
+- **Backend**: FastAPI serves the API (`/chat`, `/docs`) and the HTML interface.  
+- **Frontend**: a simple `index.html` with a chat-style interface to ask questions and display answers.  
+- **Integration**: user queries are sent to the RAG pipeline, and answers are shown directly in the browser.  
 ---
 
 ## 📦 Installation locale
