@@ -150,6 +150,6 @@ uv pip install -r requirements.txt
 ```
 
 ### 4. Run FastAPI Server
-    ```bash
-    uvicorn app.app:app --reload --port 8000
-    ```
+```bash
+uvicorn app.app:app --reload --port 8000
+```
