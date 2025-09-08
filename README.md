@@ -33,6 +33,25 @@ This project follows a structured pipeline of Retrieval-Augmented Generation (RA
 - **Vector Store** : Using a FAISS indexing method to vectorized articles.
 - **Post Treatment** : Indexed articles saved in `faiss_index\`.
 
+### 3. RAG Pipeline
+
+- **User Query**  
+  The user asks a question in natural language through the web interface.
+- **Query Expansion (optional)**  
+  The query can be reformulated into several variants to improve the retrieval of relevant documents.
+- **Retrieval**  
+  The different query formulations are used to search for similar abstracts in the vector database (**FAISS**).  
+  The results are merged (e.g., with **Reciprocal Rank Fusion**) to keep only the most relevant documents.
+- **Context Building**  
+  The selected abstracts and metadata are assembled into a **structured context**.
+- **Answer Generation (LLM)**  
+  The language model (**OpenAI via LangChain**) generates a response:  
+  - Short summary in 1–2 sentences,  
+  - Detailed bullet points for key ideas,  
+  - Embedded references (title + arXiv link).  
+- **Conversation Memory**  
+  The history of questions and answers is stored to maintain context across multiple turns.
+  
 ---
 
 ## 📦 Installation locale
