@@ -120,25 +120,27 @@ This project follows a structured pipeline of Retrieval-Augmented Generation (RA
 ```
 
 
-## 📦 Installation locale
+## Local Installation
 
-### Prérequis
-- Python ≥ 3.11
-- [Poetry](https://python-poetry.org/) ou `pip`
-- Une clé OpenAI valide (`OPENAI_API_KEY`)
+Follow these steps to run the project locally without Docker:
 
-### Étapes
-```bash
-git clone https://github.com/monuser/ia_rag_arxiv.git
-cd ia_rag_arxiv
+### 1. Clone the repository
+   ```bash
+   git clone https://github.com/khedidata/ia-rag-scientific-articles.git
+   cd ia_rag_arxiv
+   ```
+### 2. Create & Activate Virtual Environnement using [uv](https://github.com/astral-sh/uv)
+    ```bash
+    python --version
+    pip install uv
+    uv --version
+    uv venv 
+    source .venv/bin/activate        # Linux / macOS
+    .venv\Scripts\activate           # Windows PowerShell
+    uv pip install -r requirements.txt
+    ```
 
-# Créer un venv
-python -m venv .venv
-source .venv/bin/activate  # Linux/Mac
-.\.venv\Scripts\activate   # Windows
-
-# Installer les dépendances
-pip install -r requirements.txt
-
-# Lancer l’app
-uvicorn app.app:app --reload --port 8000
+### 3. Run FastAPI Server
+    ```bash
+    uvicorn app.app:app --reload --port 8000
+    ```
