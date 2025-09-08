@@ -4,27 +4,27 @@ Un assistant **RAG (Retrieval-Augmented Generation)** conçu pour interroger aut
 
 L’utilisateur peut poser des questions en langage naturel, et le système génère des réponses :  
 
-- ✅ **Structurées** : résumé concis suivi de détails en puces,  
-- 📖 **Sourcées** : chaque élément provient du contexte documentaire récupéré,  
-- 🌐 **Accessibles** : via une interface web minimaliste et intuitive.  
+- **Structurées** : résumé concis suivi de détails en puces.
+- **Sourcées** : chaque élément provient du contexte documentaire récupéré. 
+- **Accessibles** : via une interface web minimaliste et intuitive.  
 
 Le projet est développé en **Python 3.11** et repose sur plusieurs composants modernes :  
 
-- ⚡ **LangChain** → orchestration des prompts, mémoire conversationnelle et logique RAG,  
-- 🔍 **FAISS** → moteur de recherche vectorielle pour indexer et retrouver les abstracts,  
-- 🤖 **OpenAI** → modèles de langage pour la génération augmentée,  
-- 🚀 **FastAPI** → API backend performante servant les réponses et l’interface web.  
+- **LangChain** → orchestration des prompts, mémoire conversationnelle et logique RAG.
+- **FAISS** → moteur de recherche vectorielle pour indexer et retrouver les abstracts.  
+- **OpenAI** → modèles de langage pour la génération augmentée. 
+- **FastAPI** → API backend performante servant les réponses et l’interface web.  
 
 ---
 
-## ✨ Fonctionnalités
+## Project Pipeline
 
-- 🔎 **Recherche documentaire** dans les abstracts arXiv (CS).
-- 🤖 **Génération augmentée** avec LangChain + OpenAI.
-- 📝 Réponses structurées : résumé, détails en puces, citations.
-- 💾 **Mémoire conversationnelle** pour garder le contexte.
-- 🌐 **Interface Web** (FastAPI + HTML minimal).
-- 🐳 **Conteneurisation Docker** prête pour dev et prod.
+This project follows a structured pipeline of Retrieval-Augmented Generation (RAG) made for scientific articles in computer science (arXiv).
+
+### 1. Data Collection
+
+- **Source** : Automated scraping of articles via the official [arXiv API](https://info.arxiv.org/help/api/).
+- **Preporcessing** : Retention of information deemed essential ---> *Abstract* + *Metadatas* (title, author, publication, URL PDF).
 
 ---
 
