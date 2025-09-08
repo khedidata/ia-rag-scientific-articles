@@ -46,8 +46,8 @@ This project follows a structured pipeline of Retrieval-Augmented Generation (RA
   The selected abstracts and metadata are assembled into a **structured context**.
 - **Answer Generation (LLM)**  
   The language model (**OpenAI via LangChain**) generates a response:  
-  - Short summary in 1–2 sentences,  
-  - Detailed bullet points for key ideas,  
+  - Short summary in 1–2 sentences.
+  - Detailed bullet points for key ideas.
   - Embedded references (title + arXiv link).  
 - **Conversation Memory**  
   The history of questions and answers is stored to maintain context across multiple turns.
