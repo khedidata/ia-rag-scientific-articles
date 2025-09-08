@@ -131,12 +131,19 @@ Follow these steps to run the project locally without Docker:
    ```
 ### 2. Create & Activate Virtual Environnement using [uv](https://github.com/astral-sh/uv)
     ```bash
+    # Check versions
     python --version
     pip install uv
     uv --version
-    uv venv 
+
+    # Create virtual environment in .venv
+    uv venv .venv
+
+    # Activate environment
     source .venv/bin/activate        # Linux / macOS
     .venv\Scripts\activate           # Windows PowerShell
+
+    # Install dependencies
     uv pip install -r requirements.txt
     ```
 
