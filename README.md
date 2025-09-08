@@ -24,8 +24,8 @@ This project follows a structured pipeline of Retrieval-Augmented Generation (RA
 ### 1. Data Collection
 
 - **Source** : Automated scraping of articles via the official [arXiv API](https://info.arxiv.org/help/api/).
-- **Preprocessing** : Retention of information deemed essential &rarr; Abstract + Metadatas (title, author, publication, URL).
-
+- **Preprocessing** : Retention of information deemed essential &rarr; Abstract + Metadatas.
+- **Post Preprocessing Storage** : Data is stored locally in the `data\`.
 ---
 
 ## 📦 Installation locale
